@@ -1,10 +1,10 @@
 package compiler;
 
-// import compiler.nelang.antlr.NelangParser;
-// import compiler.nelang.EvalVisitor;
-// import compiler.nelang.NelangException;
-// import compiler.nelang.NelangHelper;
-// import compiler.nelang.VisitorContext;
+import compiler.sol.antlr.SolParser;
+import compiler.sol.EvalVisitor;
+import compiler.sol.SolException;
+import compiler.sol.SolHelper;
+import compiler.sol.VisitorContext;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -29,10 +29,10 @@ public class App {
 
     if (args[0].equals("gui")) {
       gui(newArgs);
-    // } else if (args[0].equals("tree")) {
-    //   tree(newArgs);
-    // } else if (args[0].equals("eval")) {
-    //   eval(newArgs);
+    } else if (args[0].equals("tree")) {
+      tree(newArgs);
+    } else if (args[0].equals("eval")) {
+      eval(newArgs);
     } else {
       System.out.println("Error: Invalid command");
       seeCommands();
@@ -63,38 +63,38 @@ public class App {
    * Run the tree walker. If the input is valid, it will print the tree in LISP-style. Else,
    * it will print the syntax error.
    */
-//   static void tree(List<String> args) {
-//     try {
-//       InputStream is = getInputStream(args);
-//       NelangParser parser = NelangHelper.getParser(is);
-//       ParseTree tree = NelangHelper.getParseTree(parser);
-//       System.out.println(tree.toStringTree(parser));
-//     } catch (Exception e) {
-//       System.out.println(e.getMessage());
-//     }
-//   }
+  static void tree(List<String> args) {
+    try {
+      InputStream is = getInputStream(args);
+      SolParser parser = SolHelper.getParser(is);
+      ParseTree tree = SolHelper.getParseTree(parser);
+      System.out.println(tree.toStringTree(parser));
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+  }
 
   /**
    * Run the interpreter.
    */
-//   static void eval(List<String> args) {
-//     try {
-//       InputStream is = getInputStream(args);
-//       ParseTree tree = NelangHelper.getParseTree(is);
-//       EvalVisitor eval = new EvalVisitor(tree);
-//       eval.visit(tree);
-//     } catch (NelangException e) {
-//       Stack<VisitorContext> stacktrace = e.stacktrace();
-//       System.out.println("Error: " + e.getMessage());
-//       System.out.println("Stacktrace:");
-//       while (!stacktrace.isEmpty()) {
-//         VisitorContext visitorContext = stacktrace.pop();
-//         System.out.println("  #" + stacktrace.size() + " : Label " + visitorContext.visitor().currentLabel().name()  + " Line " + visitorContext.context().getStart().getLine() + ":" + visitorContext.context().getStart().getCharPositionInLine());
-//       }
-//     } catch (Exception e) {
-//       System.out.println(e.getMessage());
-//     } 
-//   }
+  static void eval(List<String> args) {
+    try {
+      InputStream is = getInputStream(args);
+      ParseTree tree = SolHelper.getParseTree(is);
+      EvalVisitor eval = new EvalVisitor();
+      eval.visit(tree);
+    } catch (SolException e) {
+      Stack<VisitorContext> stacktrace = e.stacktrace();
+      System.out.println("Error: " + e.getMessage());
+      System.out.println("Stacktrace:");
+      while (!stacktrace.isEmpty()) {
+        VisitorContext visitorContext = stacktrace.pop();
+        System.out.println("  #" + stacktrace.size() + " : Line " + visitorContext.context().getStart().getLine() + ":" + visitorContext.context().getStart().getCharPositionInLine());
+      }
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    } 
+  }
 
   static InputStream getInputStream(List<String> args) throws Exception {
     String inputFile = null;
@@ -115,7 +115,7 @@ public class App {
   static void seeCommands() {
     System.out.println("Commands:");
     System.out.println("  gui [args] - Run the TestRig GUI");
-    // System.out.println("  tree - Run the tree walker");
-    // System.out.println("  eval - Run the interpreter");
+    System.out.println("  tree - Run the tree walker");
+    System.out.println("  eval - Run the interpreter");
   }
 }
