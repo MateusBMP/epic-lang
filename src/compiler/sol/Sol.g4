@@ -5,7 +5,8 @@ grammar Sol;
  */
 
 sol: LOOP VEZES sequencia EOF ;
-sequencia: present
+sequencia: explore
+         | present
          | fasesEpic ;
 fasesEpic: explore present interact critique ;
 explore: (navegar TEMPO SEMICOLON)+;
