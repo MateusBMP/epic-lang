@@ -1,0 +1,10 @@
+SEMICOLON=1
+LOOP=2
+NAVEGADOR=3
+VEZES=4
+TEMPO=5
+STRING=6
+WS=7
+';'=1
+'loop'=2
+'navegador'=3
