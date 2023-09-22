@@ -23,7 +23,7 @@ function Get-Subfolders {
 function Get-Compiler-Classpath {
     $CurrentPath = Get-Location | Select-Object -ExpandProperty Path
     $InitialPath = $CurrentPath + "\src\compiler"
-    $Classpath = Get-Subfolders -Path $InitialPath
+    $Classpath = [string](Get-Subfolders -Path $InitialPath)
     $Classpath += $CurrentPath + "\dependencies\antlr-4.13.0-complete.jar"
     return $Classpath
 }

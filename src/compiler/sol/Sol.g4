@@ -5,27 +5,27 @@ grammar Sol;
  */
 
 sol: LOOP VEZES sequencia EOF ;
-sequencia: explore
+sequencia: (explore)+
          | present
          | fasesEpic ;
-fasesEpic: explore present interact critique ;
-explore: (navegar TEMPO SEMICOLON)+;
-present: visualizarPdf TEMPO SEMICOLON
-       | visualizarVideo TEMPO SEMICOLON
-       | videoconferencia TEMPO SEMICOLON ;
-interact: whatsappWeb TEMPO SEMICOLON
-        | email TEMPO SEMICOLON
-        | videoconferencia TEMPO SEMICOLON ;
-critique: whatsappWeb TEMPO SEMICOLON
-        | email TEMPO SEMICOLON
-        | videoconferencia TEMPO SEMICOLON ;
+fasesEpic: (explore)+ present interact critique ;
+explore: navegar SEMICOLON ;
+present: visualizarPdf SEMICOLON
+       | visualizarVideo SEMICOLON
+       | videoconferencia SEMICOLON ;
+interact: whatsappWeb SEMICOLON
+        | email SEMICOLON
+        | videoconferencia SEMICOLON ;
+critique: whatsappWeb SEMICOLON
+        | email SEMICOLON
+        | videoconferencia SEMICOLON ;
 
-navegar: browser ;
-visualizarPdf: browser linkPdf ;
-visualizarVideo: browser linkVideo ;
-videoconferencia: browser linkVideoconferencia ;
-whatsappWeb: browser linkWhatsappWeb ;
-email: browser linkEmail ;
+navegar: browser TEMPO ;
+visualizarPdf: browser linkPdf TEMPO ;
+visualizarVideo: browser linkVideo TEMPO ;
+videoconferencia: browser linkVideoconferencia TEMPO ;
+whatsappWeb: browser linkWhatsappWeb TEMPO ;
+email: browser linkEmail TEMPO ;
 browser: NAVEGADOR ;
 
 linkPdf: url ;
