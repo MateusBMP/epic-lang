@@ -207,4 +207,14 @@ public interface SolListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUrl(SolParser.UrlContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolParser#vezes}.
+	 * @param ctx the parse tree
+	 */
+	void enterVezes(SolParser.VezesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolParser#vezes}.
+	 * @param ctx the parse tree
+	 */
+	void exitVezes(SolParser.VezesContext ctx);
 }

@@ -12,6 +12,16 @@ import org.antlr.v4.runtime.tree.*;
 @SuppressWarnings("CheckReturnValue")
 public class EvalVisitor extends SolBaseVisitor {
 
+    public Object visitSol(SolParser.SolContext ctx) {
+        int loop = (int) visit(ctx.vezes());
+        System.out.println("Executando Sol " + loop + " vezes");
+        for (int i = 0; i < loop; i++) {
+            System.out.println("Execução " + (i + 1) + ":");
+            visit(ctx.sequencia());
+        }
+        return null;
+    }
+
     public Object visitExplore(SolParser.ExploreContext ctx) {
         System.out.println("Iniciando etapa Explore");
         return visitChildren(ctx);
@@ -82,6 +92,11 @@ public class EvalVisitor extends SolBaseVisitor {
     public String visitUrl(SolParser.UrlContext ctx) {
         String url = ctx.getText();
         return url;
+    }
+
+    public Integer visitVezes(SolParser.VezesContext ctx) {
+        Integer vezes = (Integer) Integer.parseInt(ctx.getText());
+        return vezes;
     }
 
     protected void openBrowser(String url) {

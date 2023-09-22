@@ -130,4 +130,10 @@ public interface SolVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitUrl(SolParser.UrlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolParser#vezes}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVezes(SolParser.VezesContext ctx);
 }

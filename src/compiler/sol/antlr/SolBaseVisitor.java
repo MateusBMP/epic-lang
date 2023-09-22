@@ -152,4 +152,11 @@ public class SolBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements So
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitUrl(SolParser.UrlContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitVezes(SolParser.VezesContext ctx) { return visitChildren(ctx); }
 }

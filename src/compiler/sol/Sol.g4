@@ -4,7 +4,7 @@ grammar Sol;
  * Parser Rules
  */
 
-sol: LOOP VEZES sequencia EOF ;
+sol: LOOP vezes sequencia EOF ;
 sequencia: (explore)+
          | present
          | fasesEpic ;
@@ -35,6 +35,7 @@ linkWhatsappWeb: url ;
 linkEmail: url ;
 
 url: STRING ;
+vezes: VEZES ;
 
 /*
  * Lexer Rules

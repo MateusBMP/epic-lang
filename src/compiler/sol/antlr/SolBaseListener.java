@@ -252,6 +252,18 @@ public class SolBaseListener implements SolListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitUrl(SolParser.UrlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVezes(SolParser.VezesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVezes(SolParser.VezesContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
