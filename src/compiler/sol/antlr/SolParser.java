@@ -372,15 +372,15 @@ public class SolParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PresentContext extends ParserRuleContext {
-		public VisualizarPdfContext visualizarPdf() {
-			return getRuleContext(VisualizarPdfContext.class,0);
+		public VideoconferenciaContext videoconferencia() {
+			return getRuleContext(VideoconferenciaContext.class,0);
 		}
 		public TerminalNode SEMICOLON() { return getToken(SolParser.SEMICOLON, 0); }
 		public VisualizarVideoContext visualizarVideo() {
 			return getRuleContext(VisualizarVideoContext.class,0);
 		}
-		public VideoconferenciaContext videoconferencia() {
-			return getRuleContext(VideoconferenciaContext.class,0);
+		public VisualizarPdfContext visualizarPdf() {
+			return getRuleContext(VisualizarPdfContext.class,0);
 		}
 		public PresentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -412,7 +412,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(68);
-				visualizarPdf();
+				videoconferencia();
 				setState(69);
 				match(SEMICOLON);
 				}
@@ -430,7 +430,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(74);
-				videoconferencia();
+				visualizarPdf();
 				setState(75);
 				match(SEMICOLON);
 				}
@@ -450,15 +450,15 @@ public class SolParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class InteractContext extends ParserRuleContext {
-		public WhatsappWebContext whatsappWeb() {
-			return getRuleContext(WhatsappWebContext.class,0);
+		public VideoconferenciaContext videoconferencia() {
+			return getRuleContext(VideoconferenciaContext.class,0);
 		}
 		public TerminalNode SEMICOLON() { return getToken(SolParser.SEMICOLON, 0); }
 		public EmailContext email() {
 			return getRuleContext(EmailContext.class,0);
 		}
-		public VideoconferenciaContext videoconferencia() {
-			return getRuleContext(VideoconferenciaContext.class,0);
+		public WhatsappWebContext whatsappWeb() {
+			return getRuleContext(WhatsappWebContext.class,0);
 		}
 		public InteractContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -490,7 +490,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(79);
-				whatsappWeb();
+				videoconferencia();
 				setState(80);
 				match(SEMICOLON);
 				}
@@ -508,7 +508,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(85);
-				videoconferencia();
+				whatsappWeb();
 				setState(86);
 				match(SEMICOLON);
 				}
@@ -528,15 +528,15 @@ public class SolParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CritiqueContext extends ParserRuleContext {
-		public WhatsappWebContext whatsappWeb() {
-			return getRuleContext(WhatsappWebContext.class,0);
+		public VideoconferenciaContext videoconferencia() {
+			return getRuleContext(VideoconferenciaContext.class,0);
 		}
 		public TerminalNode SEMICOLON() { return getToken(SolParser.SEMICOLON, 0); }
 		public EmailContext email() {
 			return getRuleContext(EmailContext.class,0);
 		}
-		public VideoconferenciaContext videoconferencia() {
-			return getRuleContext(VideoconferenciaContext.class,0);
+		public WhatsappWebContext whatsappWeb() {
+			return getRuleContext(WhatsappWebContext.class,0);
 		}
 		public CritiqueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -568,7 +568,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(90);
-				whatsappWeb();
+				videoconferencia();
 				setState(91);
 				match(SEMICOLON);
 				}
@@ -586,7 +586,7 @@ public class SolParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(96);
-				videoconferencia();
+				whatsappWeb();
 				setState(97);
 				match(SEMICOLON);
 				}
@@ -1315,36 +1315,36 @@ public class SolParser extends Parser {
 		"\u0000;9\u0001\u0000\u0000\u0000;<\u0001\u0000\u0000\u0000<=\u0001\u0000"+
 		"\u0000\u0000=>\u0003\b\u0004\u0000>?\u0003\n\u0005\u0000?@\u0003\f\u0006"+
 		"\u0000@\u0005\u0001\u0000\u0000\u0000AB\u0003\u000e\u0007\u0000BC\u0005"+
-		"\u0001\u0000\u0000C\u0007\u0001\u0000\u0000\u0000DE\u0003\u0010\b\u0000"+
+		"\u0001\u0000\u0000C\u0007\u0001\u0000\u0000\u0000DE\u0003\u0014\n\u0000"+
 		"EF\u0005\u0001\u0000\u0000FN\u0001\u0000\u0000\u0000GH\u0003\u0012\t\u0000"+
-		"HI\u0005\u0001\u0000\u0000IN\u0001\u0000\u0000\u0000JK\u0003\u0014\n\u0000"+
+		"HI\u0005\u0001\u0000\u0000IN\u0001\u0000\u0000\u0000JK\u0003\u0010\b\u0000"+
 		"KL\u0005\u0001\u0000\u0000LN\u0001\u0000\u0000\u0000MD\u0001\u0000\u0000"+
 		"\u0000MG\u0001\u0000\u0000\u0000MJ\u0001\u0000\u0000\u0000N\t\u0001\u0000"+
-		"\u0000\u0000OP\u0003\u0016\u000b\u0000PQ\u0005\u0001\u0000\u0000QY\u0001"+
-		"\u0000\u0000\u0000RS\u0003\u0018\f\u0000ST\u0005\u0001\u0000\u0000TY\u0001"+
-		"\u0000\u0000\u0000UV\u0003\u0014\n\u0000VW\u0005\u0001\u0000\u0000WY\u0001"+
+		"\u0000\u0000OP\u0003\u0014\n\u0000PQ\u0005\u0001\u0000\u0000QY\u0001\u0000"+
+		"\u0000\u0000RS\u0003\u0018\f\u0000ST\u0005\u0001\u0000\u0000TY\u0001\u0000"+
+		"\u0000\u0000UV\u0003\u0016\u000b\u0000VW\u0005\u0001\u0000\u0000WY\u0001"+
 		"\u0000\u0000\u0000XO\u0001\u0000\u0000\u0000XR\u0001\u0000\u0000\u0000"+
-		"XU\u0001\u0000\u0000\u0000Y\u000b\u0001\u0000\u0000\u0000Z[\u0003\u0016"+
-		"\u000b\u0000[\\\u0005\u0001\u0000\u0000\\d\u0001\u0000\u0000\u0000]^\u0003"+
+		"XU\u0001\u0000\u0000\u0000Y\u000b\u0001\u0000\u0000\u0000Z[\u0003\u0014"+
+		"\n\u0000[\\\u0005\u0001\u0000\u0000\\d\u0001\u0000\u0000\u0000]^\u0003"+
 		"\u0018\f\u0000^_\u0005\u0001\u0000\u0000_d\u0001\u0000\u0000\u0000`a\u0003"+
-		"\u0014\n\u0000ab\u0005\u0001\u0000\u0000bd\u0001\u0000\u0000\u0000cZ\u0001"+
-		"\u0000\u0000\u0000c]\u0001\u0000\u0000\u0000c`\u0001\u0000\u0000\u0000"+
-		"d\r\u0001\u0000\u0000\u0000ef\u0003\u001a\r\u0000fg\u0005\u0005\u0000"+
-		"\u0000g\u000f\u0001\u0000\u0000\u0000hi\u0003\u001a\r\u0000ij\u0003\u001c"+
-		"\u000e\u0000jk\u0005\u0005\u0000\u0000k\u0011\u0001\u0000\u0000\u0000"+
-		"lm\u0003\u001a\r\u0000mn\u0003\u001e\u000f\u0000no\u0005\u0005\u0000\u0000"+
-		"o\u0013\u0001\u0000\u0000\u0000pq\u0003\u001a\r\u0000qr\u0003 \u0010\u0000"+
-		"rs\u0005\u0005\u0000\u0000s\u0015\u0001\u0000\u0000\u0000tu\u0003\u001a"+
-		"\r\u0000uv\u0003\"\u0011\u0000vw\u0005\u0005\u0000\u0000w\u0017\u0001"+
-		"\u0000\u0000\u0000xy\u0003\u001a\r\u0000yz\u0003$\u0012\u0000z{\u0005"+
-		"\u0005\u0000\u0000{\u0019\u0001\u0000\u0000\u0000|}\u0005\u0003\u0000"+
-		"\u0000}\u001b\u0001\u0000\u0000\u0000~\u007f\u0003&\u0013\u0000\u007f"+
-		"\u001d\u0001\u0000\u0000\u0000\u0080\u0081\u0003&\u0013\u0000\u0081\u001f"+
-		"\u0001\u0000\u0000\u0000\u0082\u0083\u0003&\u0013\u0000\u0083!\u0001\u0000"+
-		"\u0000\u0000\u0084\u0085\u0003&\u0013\u0000\u0085#\u0001\u0000\u0000\u0000"+
-		"\u0086\u0087\u0003&\u0013\u0000\u0087%\u0001\u0000\u0000\u0000\u0088\u0089"+
-		"\u0005\u0006\u0000\u0000\u0089\'\u0001\u0000\u0000\u0000\u008a\u008b\u0005"+
-		"\u0004\u0000\u0000\u008b)\u0001\u0000\u0000\u0000\u000626;MXc";
+		"\u0016\u000b\u0000ab\u0005\u0001\u0000\u0000bd\u0001\u0000\u0000\u0000"+
+		"cZ\u0001\u0000\u0000\u0000c]\u0001\u0000\u0000\u0000c`\u0001\u0000\u0000"+
+		"\u0000d\r\u0001\u0000\u0000\u0000ef\u0003\u001a\r\u0000fg\u0005\u0005"+
+		"\u0000\u0000g\u000f\u0001\u0000\u0000\u0000hi\u0003\u001a\r\u0000ij\u0003"+
+		"\u001c\u000e\u0000jk\u0005\u0005\u0000\u0000k\u0011\u0001\u0000\u0000"+
+		"\u0000lm\u0003\u001a\r\u0000mn\u0003\u001e\u000f\u0000no\u0005\u0005\u0000"+
+		"\u0000o\u0013\u0001\u0000\u0000\u0000pq\u0003\u001a\r\u0000qr\u0003 \u0010"+
+		"\u0000rs\u0005\u0005\u0000\u0000s\u0015\u0001\u0000\u0000\u0000tu\u0003"+
+		"\u001a\r\u0000uv\u0003\"\u0011\u0000vw\u0005\u0005\u0000\u0000w\u0017"+
+		"\u0001\u0000\u0000\u0000xy\u0003\u001a\r\u0000yz\u0003$\u0012\u0000z{"+
+		"\u0005\u0005\u0000\u0000{\u0019\u0001\u0000\u0000\u0000|}\u0005\u0003"+
+		"\u0000\u0000}\u001b\u0001\u0000\u0000\u0000~\u007f\u0003&\u0013\u0000"+
+		"\u007f\u001d\u0001\u0000\u0000\u0000\u0080\u0081\u0003&\u0013\u0000\u0081"+
+		"\u001f\u0001\u0000\u0000\u0000\u0082\u0083\u0003&\u0013\u0000\u0083!\u0001"+
+		"\u0000\u0000\u0000\u0084\u0085\u0003&\u0013\u0000\u0085#\u0001\u0000\u0000"+
+		"\u0000\u0086\u0087\u0003&\u0013\u0000\u0087%\u0001\u0000\u0000\u0000\u0088"+
+		"\u0089\u0005\u0006\u0000\u0000\u0089\'\u0001\u0000\u0000\u0000\u008a\u008b"+
+		"\u0005\u0004\u0000\u0000\u008b)\u0001\u0000\u0000\u0000\u000626;MXc";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -10,15 +10,15 @@ sequencia: (explore)+
          | fasesEpic ;
 fasesEpic: (explore)+ present interact critique ;
 explore: navegar SEMICOLON ;
-present: visualizarPdf SEMICOLON
+present: videoconferencia SEMICOLON
        | visualizarVideo SEMICOLON
-       | videoconferencia SEMICOLON ;
-interact: whatsappWeb SEMICOLON
+       | visualizarPdf SEMICOLON ;
+interact: videoconferencia SEMICOLON
         | email SEMICOLON
-        | videoconferencia SEMICOLON ;
-critique: whatsappWeb SEMICOLON
+        | whatsappWeb SEMICOLON ;
+critique: videoconferencia SEMICOLON
         | email SEMICOLON
-        | videoconferencia SEMICOLON ;
+        | whatsappWeb SEMICOLON ;
 
 navegar: browser TEMPO ;
 visualizarPdf: browser linkPdf TEMPO ;
