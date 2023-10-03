@@ -1,4 +1,4 @@
 .antlr/
 .target/
 .vscode/
-*.sol
+/*.sol
