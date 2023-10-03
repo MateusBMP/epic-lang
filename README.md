@@ -9,6 +9,10 @@ Antes de começar, certifique-se de que você tenha o seguinte software instalad
 - [Java 20](https://www.oracle.com/java/technologies/javase-downloads.html): Certifique-se de que o Java 20 esteja instalado e configurado corretamente no seu sistema.
 - [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell): O PowerShell é necessário para executar o script PowerShell `compiler.ps1`.
 
+Para utilizar a interface, se desejar, também será necessário instalar o PHP 8.2 ou superior:
+
+- [PHP 8.2](https://www.php.net/downloads): O PHP é necessário para executar a interface gráfica do interpretador EPIC.
+
 ## Configuração do Projeto
 
 1. Clone este repositório em sua máquina local:
@@ -58,25 +62,19 @@ Para analisar a tabela de tokens em uma árvore sintática, execute o comando gu
 .\compiler.ps1 run gui meu-programa.sol
 ```
 
+### Interface Gráfica
+
+A interface do projeto pode ser utilizada para chamar os comandos `tree` e `gui` de forma mais simples. Para isso, é necessário ter o PHP 8.2 ou superior instalado e configurado corretamente no seu sistema. Para executar a interface, execute o seguinte comando no PowerShell:
+
+```powershell
+.\compiler.ps1 run-server
+```
+
+Agora você pode acessar a interface em seu navegador no endereço `http://localhost:8000`.
+
 ### Exemplos de programa EPIC
 
-```epic
-loop 1
-navegador sem_limite;
-```
-
-```epic
-loop 1
-navegador https://meet.google.com/ 20_min;
-```
-
-```epic
-loop 2
-navegador 20_min;
-navegador https://meet.google.com/ 20_min;
-navegador https://meet.google.com/ 20_min;
-navegador https://meet.google.com/ 20_min;
-```
+Você pode encontrar exemplos de programas em [`.\public\exemplos\`](/public/exemplos/). Estes exemplos também podem ser encontrados na interface gráfica do interpretador EPIC.
 
 ## Contribuição
 

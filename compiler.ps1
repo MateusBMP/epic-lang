@@ -5,6 +5,7 @@ function Get-Usage {
     Write-Output "  compile        Compile the generated code"
     Write-Output "  run [args]     Run the compiled code"
     Write-Output "  update-grammar Update the grammar file from the ANTLR4 tool"
+    Write-Output "  run-server     Start the PHP server"
 }
 
 function Get-Subfolders {
@@ -65,6 +66,9 @@ switch ($Args[0].ToLower()) {
     }
     "update-grammar" {
         java -jar "./dependencies/antlr-4.13.0-complete.jar" -o "./src/compiler/sol/antlr" -package compiler.sol.antlr -listener -visitor "./src/compiler/sol/Sol.g4"
+    }
+    "run-server" {
+        php -S localhost:8000 -t .\public\
     }
     Default { Get-Usage }
 }
